@@ -1,0 +1,28 @@
+<%- model_class = Lobby -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name %></h1>
+</div>
+
+<!-- list all of the rooms available in the looby -->
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.name %></td>
+        <td><%= room.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_room_path,
+            :class => 'btn btn-primary' %>
