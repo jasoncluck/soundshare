@@ -15,7 +15,10 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
 
-    redirect_to lobbies_path
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @room }
+    end
   end
 
   # GET /rooms/new
@@ -73,7 +76,7 @@ class RoomsController < ApplicationController
     @room.destroy
 
     respond_to do |format|
-      format.html { redirect_to rooms_url }
+      format.html { redirect_to lobbies_path }
       format.json { head :no_content }
     end
   end
