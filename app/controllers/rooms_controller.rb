@@ -1,20 +1,5 @@
-require 'soundcloud'
-
 class RoomsController < ApplicationController
 
-  before_filter :soundcloud_setup
-
-  def soundcloud_setup
-    # create a client object with your app credentials
-  client = Soundcloud.new(:client_id => 'sixtycakes')
-
-  # get a tracks oembed data
-  track_url = 'http://soundcloud.com/forss/flickermood'
-  @embed_info = client.get('/oembed', :url => track_url)
-
-  # print the html for the player widget
-  #puts embed_info['html']
-  end
 
 
 
