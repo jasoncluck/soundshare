@@ -10,7 +10,7 @@
 </div>
 
 <%= @embed_info['html'].html_safe %>
-<%= @track %>
+<%= @tracklist %>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
@@ -40,7 +40,7 @@
     <h3 id="myModalLabel">Modal header</h3>
   </div>
   <div class="modal-body">
-    <p>One fine body…</p>
+    <p> <%= render :partial => 'searchform' %> </p>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>

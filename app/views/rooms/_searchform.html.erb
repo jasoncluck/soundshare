@@ -1,0 +1,6 @@
+<%= simple_form_for(@query, :html => {:class => 'form-horizontal' }, :remote => true) do |f| %>
+  <%= f.input :sc_track %>
+  <%= f.input :sc_user %>
+  <%= f.input :sc_bpm %>
+  <%= f.button :submit %>
+<% end %>

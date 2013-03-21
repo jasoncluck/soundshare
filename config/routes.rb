@@ -1,7 +1,7 @@
 Soundshare::Application.routes.draw do
   resources :lobbies
 
-
+  resources :queries
   resources :rooms
 
 
