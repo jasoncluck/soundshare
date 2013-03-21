@@ -1,3 +1,17 @@
 // Place all the styles related to the Rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.track-controls {
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	.track-change{
+		padding-left: 10px;
+		padding-right: 10px;	
+
+	}
+}
+
