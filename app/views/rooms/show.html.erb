@@ -3,10 +3,7 @@
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 </div>
 
-
-<div>
-  <%= puts @embed_info %>
-</div>
+<%= @embed_info['html'].html_safe %>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
