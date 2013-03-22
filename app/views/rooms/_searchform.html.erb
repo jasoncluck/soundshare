@@ -1,6 +1,12 @@
-<%= simple_form_for(@query, :html => {:class => 'form-horizontal' }, :remote => true) do |f| %>
-  <%= f.input :sc_track %>
-  <%= f.input :sc_user %>
-  <%= f.input :sc_bpm %>
-  <%= f.button :submit %>
+<!-- Partial for search form fields when getting a new song.  Pass in room locally. -->
+<%= form_tag search_path, :remote => true, :html => { :id => 'create_query' }  do |f| %>
+	<%= label_tag :sc_track %>
+	<%= text_field_tag :sc_track, params[:sc_track] %>
+
+	<%= label_tag :sc_user %>
+	<%= text_field_tag :sc_user, params[:sc_user] %>
+
+	<%= label_tag :sc_bpm %>
+	<%= text_field_tag :sc_bpm, params[:sc_bpm] %>
+	<%= submit_tag "Search Soundcloud", :class => "btn btn-primary" %>
 <% end %>

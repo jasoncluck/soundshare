@@ -7,6 +7,5 @@ class ApplicationController < ActionController::Base
     @client = Soundcloud.new(:client_id => 'da1368916c4f898320127b2cd453d36f')
     track_url = 'http://soundcloud.com/forss/flickermood'
     @embed_info = @client.get('/oembed', :url => track_url)
-    @query = Query.new
   end
 end
