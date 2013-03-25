@@ -6,6 +6,22 @@ class RoomsController < ApplicationController
     end
   end
 
+  def searchreturn
+    respond_to do |format|
+      format.js
+    end
+  end
+
+
+  def results
+    render :partial => 'searchresults'
+  end
+
+  def searchform
+    render :partial => 'searchform'
+  end
+
+
   # GET /rooms
   # GET /rooms.json
   def index

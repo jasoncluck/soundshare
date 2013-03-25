@@ -1,7 +1,10 @@
 Soundshare::Application.routes.draw do
   resources :lobbies
-  resources :rooms
   match 'rooms/search' => 'rooms#search', :as => :search
+  match 'rooms/results' => 'rooms#results', :as => :results
+  match 'rooms/searchret' => 'rooms#searchreturn', :as => :search_return
+  match 'rooms/searchform' => 'rooms#searchform', :as => :search_form
+  resources :rooms
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

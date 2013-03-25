@@ -1,5 +1,5 @@
 <!-- Partial for search form fields when getting a new song.  Pass in room locally. -->
-<%= form_tag search_path, :remote => true, :html => { :id => 'create_query' }  do |f| %>
+<%= form_tag search_path, :remote => true  do |f| %>
 	<%= label_tag :sc_track %>
 	<%= text_field_tag :sc_track, params[:sc_track] %>
 
